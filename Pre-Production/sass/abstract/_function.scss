@@ -1,0 +1,26 @@
+// FONT SIZE
+@function fontSize($var ,$size) {
+
+    @if $size == '' {
+
+        @return #{$var};
+
+    }@else {
+
+        @return #{$var - $size};
+
+    }
+};
+
+// PADDING SECTION
+@function padding($value) {
+    
+    @if $value == '' {
+        @return $padding-section;
+    }@else {
+        $padding-section: 10rem 7rem $value 7rem;
+        @return $padding-section;
+    }
+
+};
+

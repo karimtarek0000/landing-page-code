@@ -1,0 +1,292 @@
+/////////////////////////
+// NAVBAR
+.navbar {
+    height: 0;
+    color: $color-primary;
+    transform: translateY(2rem);
+    position: relative;
+    z-index: 10;
+
+    // NAVBAR ANCHOR
+    & a:link,
+    & a:visited {
+        text-decoration: none;
+    }
+
+    // NAVBAR BOX
+    &-box {
+        position: relative;
+    }
+
+    // NAVBAR BRAND
+    &-brand {
+        display: inline-block;
+        color: inherit;
+        font-size: 3vmax;
+    }
+
+    // NAVBRA CONTENT
+    &-content {
+        overflow: hidden;
+    }
+
+    // NAVBRA TOGGLE
+    &-toggle {
+        position: absolute;
+        @include translate(top, right, 35%, 0);
+        background-color: transparent;
+        display: block;
+        border: none;
+        outline: none;
+        width: 5rem;
+        height: 3rem;
+        transition: all .4s ease;
+        cursor: pointer;
+
+        // RESPONSIVE
+        @include respond(tablet-l) {
+            @include translate(top, right, 7%, 0);
+        }
+
+        @include respond(tablet-p) {
+            @include translate(top, right, 3%, 0);
+        }
+
+        @include respond(phone) {
+            @include translate(top, right, 25%, 0);
+        }
+    }
+
+    // NAVBAR TOGGLE ICON
+    &-toggle-icon {
+        position: relative;
+        display: block;
+        background-color: $color-primary;
+        margin: 0 auto;
+        width: 90%;
+        height: .3rem;
+
+        // NAVBAR TOGGLE ICON :AFTER AND :BEFORE
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            background-color: $color-primary;
+            width: 100%;
+            height: inherit;
+            left: 0;
+            transition: top .3s ease;
+        }
+
+        // NAVBAR TOGGLE ICON :BEFORE
+        &::before {
+            top: -1rem;
+        }
+
+        // NAVBAR TOGGLE ICON :AFTER
+        &::after {
+            top: 1rem;
+        }
+    }
+
+    // NAVBAR TOGGLE :HOVER AND TOGGLE ICON :BEFORE
+    &-toggle:hover &-toggle-icon::before {
+        top: -1.2rem;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            top: -1rem;
+        }
+
+       @include respond(device) {
+            top: -1rem;
+       }
+    }
+
+    // NAVBAR TOGGLE :HOVER AND TOGGLE ICON :AFTER
+    &-toggle:hover &-toggle-icon::after {
+        top: 1.2rem;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            top: 1rem;
+        }
+
+        @include respond(device) {
+            top: 1rem;
+        }
+    }
+
+    // NAVBAR TOGGLE ACTIVE
+    &-toggle--active {
+        transform: rotate(-45deg) !important;
+        transition: all .4s ease;
+
+        // NAVBAR TOGGLE ACTIVE > NAVBAR TOGGLE ICON
+        & .navbar-toggle-icon {
+            background-color: transparent;
+
+            // NAVBAR TOGGLE ACTIVE > NAVBAR TOGGLE ICON :AFTER AND :BEFORE
+            &::before,
+            &::after {
+                top: 0;
+            }
+
+            // NAVBAR TOGGLE ACTIVE > NAVBAR TOGGLE ICON :BEFORE
+            &::before {
+                transform: rotate(90deg);
+            }
+        }
+
+    }
+
+    // NAVBAR TOGGLE ACTIVE AND NAVBAR TOGGLE ICON :BEFORE
+    &-toggle--active:hover &-toggle-icon::before {
+        top: 0;
+    }
+
+    // NAVBAR TOGGLE ACTIVE AND NAVBAR TOGGLE ICON :AFTER
+    &-toggle--active:hover &-toggle-icon::after {
+        top: 0;
+    }
+
+    // NAVBAR NAV
+    &-nav {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: 80%;
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 1rem;
+        display: none;
+        color: $color-font-navbar;
+
+        // RESPONSIVE
+        @include respond(tablet-l) {
+            width: 100%;
+        }
+
+        @include respond(tablet-p) {
+            text-align: left;
+            margin-top: 2rem;
+        }
+    }
+
+    // NAVBAR ITEM
+    &-item {
+        position: relative;
+        display: inline-block;
+        width: calc(25% - 1%);
+
+        // NAVBAR ITEM NOT :LAST CHILD
+        &:not(:last-child) {
+            margin-right: 1%;
+        }
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            display: block;
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
+    }
+
+    // NAVBAR LINK
+    &-link {
+        background-color: $color-primary;
+        display: block;
+        color: inherit;
+        border-radius: 2px;
+        width: 100%;
+        font-size: $font-size-navbar;
+        padding: 1rem;
+        font-weight: 700;
+
+        // NAVBAR LINK I
+        & > i {
+            @include respond(tablet-p) {
+                display: none;
+            }
+        }
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            border-radius: 0;
+            padding-left: 1rem;
+        }
+    }
+
+    // NAVBAR ITEM LIST
+    &-item-list {
+        position: absolute;
+        width: 40%;
+        @include translate(top, left, 115%, 0);
+        display: none;
+        background-color: darken($color-primary, 15%);
+        padding: .5rem;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            position: static;
+            width: 100%;
+        }
+    }
+
+    // NAVBAR ITEM ITEM
+    &-item-item {
+        position: relative;
+        color: inherit;
+        font-weight: 700;
+        padding: 1rem;
+        font-size: $font-size-navbar;
+
+        // NAVBAR ITEM ITEM NOT :LAST CHILD
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        & > i {
+            @include respond(tablet-p) {
+                display: none;
+            }
+        }
+    }
+
+    // NAVBAR ITEM ITEM :HOVER AND NAVBAR SUBLIST AND NAVBAR ITEM ITEM
+    &-item-item:hover &-item-sublist,
+    &-item-item:active &-item-sublist {
+        display: block;
+    }
+
+    // NAVBAR ITEM SUBLIST
+    &-item-sublist {
+        position: absolute;
+        @include translate(top, right, 25%, -156%);
+        width: 150%;
+        z-index: 100;
+        text-align: center;
+        display: none;
+        background-color: darken($color-primary, 25%);
+    }
+
+    // NAVBAR ITEM SUBLIST ITEM
+    &-item-sublist-item {
+
+        // NAVBAR ITEM SUBLIST ITEM NOT :LAST CHILD
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    // NAVBAR SUBLIST LINK
+    &-item-sublist-link {
+        display: block;
+        color: inherit;
+        padding: 1rem;
+    }
+}

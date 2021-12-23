@@ -1,0 +1,74 @@
+/////////////////////////////
+// START COLOR BACKGROUND
+$color-primary: white;
+$color-secondary: #cc5a35;
+$color-third: #292929;
+$color-fourth: #323232;
+// END COLOR BACKGROUND
+/////////////////////////////
+
+/////////////////////////////
+// START COLOR OTHER
+$color-hover: #292929;
+$color-item-pricing-tables: #e8e3e2;
+// END COLOR OTHER
+/////////////////////////////
+
+///////////////////////////////////
+// START FONT COLOR
+$color-font-title: #ffffff5e;
+$color-paragraph: darken($color-primary, 30%);
+$color-font-navbar: rgba(0,0,0, .6);
+// END FONT COLOR
+///////////////////////////////////
+
+///////////////////////////////////
+// START FONT SIZE
+// FONT SIZE PRIMARY
+//$font-size-h1: 6rem;
+$font-size-h1: 4vmax;
+$font-size-head: 3vmax;
+$font-size-head-medium: 2vmax;
+$font-size-head-small: 1.5vmax;
+$font-size-title-section: 1.7vmin;
+$font-size-paragraph: 2.2vmin;
+$font-size-navbar: 1.7rem;
+$font-size-button: 1.3rem;
+
+
+$font-size-heading-category: 2vmin;
+$font-size-heading-category-mobile: 2.5rem;
+
+// FONT SIZE ICONS
+$font-size-icon-big: 3.5rem;
+$font-size-icon-medium: 3rem;
+$font-size-icon-small: 2.5rem;
+// END FONT SIZE
+///////////////////////////////////
+
+///////////////////////////////////
+// START BUTTON
+$backgroud-color-button: #393939;
+// END BUTTON
+///////////////////////////////////
+
+///////////////////////////////////
+// padding and margin
+$padding-section: 10rem 7rem 0 7rem;
+$padding-section-mobile: 10rem 1.5rem;
+
+$margin-right: 4rem;
+$padding-paragarph: 1rem;
+
+// GRADIENT
+$color-gradient: rgba(0,0,0, .7);
+$color-gradient-secandary: linear-gradient(rgba(#292929, .8), rgba(#292929, .8));
+$color-overlay: rgba($color-secondary, .7);
+
+// OTHERS
+$line-height-paragraph: 2;
+$border-radius: 5px;
+$letter-spacing: 1px;
+$text-indent: 2rem;
+
+$color-border-bottom: 1px solid darken($color-primary, 50%);

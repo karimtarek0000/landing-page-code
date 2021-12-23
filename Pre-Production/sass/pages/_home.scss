@@ -1,0 +1,2213 @@
+/////////////////////////////////
+// SECTION OUR WORK
+.our-work {
+    height: 100vh;
+    padding: padding('');
+    background-color: $color-third;
+    @extend %basics;
+    overflow: hidden;
+    
+    // RESPONSIVE
+    @include respond(tablet-p) {
+        padding: $padding-section-mobile;
+        height: auto;
+    }
+
+    // OUR WORK BOX
+    &-box {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        // OUR WORK BOX A
+        & a:link,
+        a:visited {
+            text-decoration: none;
+        }
+    }
+
+    // OUR WORK CONTENT
+    &-content {
+        flex: 2 1 0;
+        margin-right: $margin-right;
+
+        // OUR WORK CONTENT > P
+        &>p {
+            line-height: $line-height-paragraph;
+            font-size: $font-size-paragraph;
+        }
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            flex-basis: 100%;
+        }
+    }
+
+    // OUR WORK HEADING
+    &-heading {
+        font-size: $font-size-head;
+        font-weight: 400;
+    }
+
+    // OUR WORK TITLE
+    &-title {
+        color: $color-font-title;
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+    }
+
+    // UNDERLINE
+    .underline {
+        &::after {
+            @include translate(bottom, left, 0, 0);
+            width: 20%;
+        }
+    }
+
+    // OUR WORK PARAGRAPH
+    &-paragrpah {
+        color: $color-paragraph;
+    }
+
+    // OUR WORK BUTTON
+    &-button {
+        margin-top: 3rem;
+
+        // OUR WORK BUTTON I
+        &>i {
+            padding-right: 3px;
+        }
+    }
+
+    // OUR WORK IMAGE
+    &-image {
+        flex: 1 0 0;
+        align-self: flex-end;
+        transform: scale(1.4);
+
+        // OUR WORK IMAGE IMG
+        &>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        // RESPONDIVE
+        @include respond(tablet-p) {
+            display: none;
+        }
+    }
+
+}
+
+//////////////////////////////////////
+// SECTION OUR SPECIALTY
+.our-specialty {
+    background-color: $color-fourth;
+    padding: padding(10rem);
+    @extend %basics;
+    overflow: hidden;
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+        padding: $padding-section-mobile;
+        padding-bottom: 0;
+    }
+
+    // OUR SPECIALTY BOX
+    &-box {
+        display: flex;
+
+        &>* {
+            flex: 1 1 100%;
+        }
+
+        // RESPONSIVE
+        @include respond(tablet-l) {
+            flex-direction: column;
+        }
+    }
+
+    // OUR SPECIALTY CONTENT
+    &-content {
+        margin-top: 7rem;
+        margin-right: $margin-right;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            margin-top: 0;
+        }
+
+        // OUR SPECIALTY CONTENT > P
+        & p {
+            font-size: $font-size-paragraph;
+            line-height: $line-height-paragraph;
+        }
+
+    }
+
+    // OUR SPECIALTY CONTENT HEADING
+    &-content-heading {
+        font-size: $font-size-head;
+        text-indent: $text-indent;
+    }
+
+    // OUR SPECIALTY CONTENT LINE
+    .line {
+
+        // OUR SPECIALTY LINE ::AFTER
+        &::after {
+
+            // RESPONSIVE
+            @include translate(top, left, 0, 0);
+        }
+    }
+
+    // OUR SPECIALTY CONTENT TITLE
+    &-content-title {
+        color: $color-font-title;
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+    }
+
+
+    // OUR SPECIALTY CONTENT PARAGRAPH
+    &-content-paragraph {
+        color: $color-paragraph;
+        margin: 3rem 0;
+    }
+
+    // OUR SPECIALTY CATEGORY
+    &-category {
+        align-self: flex-start;
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+    }
+
+    // OUR SPECIALTY CATEGORY BOX
+    &-category-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2vmax;
+        width: 50%;
+        border-style: solid;
+        border-color: $color-third;
+
+        &:nth-child(1) {
+            border-width: 1px 0 1px 1px;
+        }
+
+        &:nth-child(2) {
+            border-width: 1px;
+        }
+
+        &:nth-child(3) {
+            border-width: 0 1px 1px 1px;
+        }
+
+        &:nth-child(4) {
+            border-width: 0 1px 1px 0;
+        }
+
+        &:nth-child(5) {
+            border-width: 0 1px 1px 1px;
+        }
+
+        &:nth-child(6) {
+            border-width: 0 1px 1px 0;
+        }
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            width: 100%;
+            background-color: $color-hover;
+            border: none;
+
+            // OUR SPECIALTY CONTENT BOX :NOT :LAST CHILD
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        // OUR SPECIALTY CONTENT BOX I
+        &>i {
+            font-size: $font-size-icon-medium;
+            color: $color-secondary;
+        }
+    }
+
+    // OUR SPECIALTY CONTENT HEADING
+    &-category-heading {
+        padding: 1rem 0;
+        font-size: $font-size-heading-category;
+        letter-spacing: $letter-spacing;
+    }
+
+    // OUR SPECIALTY CATEGORY TITLE
+    &-category-title {
+        font-size: $font-size-paragraph;
+        margin: 0 auto;
+        color: $color-font-title;
+        line-height: $line-height-paragraph;
+        opacity: 0;
+        transform: translateY(5rem);
+        transition: all .6s .5s ease;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &-category-heading,
+    &-category-box i {
+        transform: translateY(4.5rem);
+        transition: all .6s .6s ease;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            transform: translateY(0);
+        }
+    }
+
+    // OUR SPECIALTY CATEGORY BOX :HOVER AND CATEGORY TITLE
+    &-category-box:hover &-category-title {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+    &-category-box:hover &-category-heading,
+    &-category-box:hover i {
+        transform: translateY(0);
+    }
+
+    // OUR SPECIALTY BOX :HOVER
+    &-category-box:hover {
+        background-color: $color-hover;
+        border-color: transparent;
+        cursor: pointer;
+    }
+
+}
+
+//////////////////////////////////////
+// SECTION OUR TEAM
+.our-team {
+    padding: padding(10rem);
+    @extend %basics;
+    overflow: hidden;
+
+    @include respond(tablet-p) {
+        padding: $padding-section-mobile;
+    }
+
+    &-box {}
+
+    &-header {}
+
+    &-heading {
+        font-size: $font-size-head;
+        text-indent: $text-indent;
+    }
+
+    .line {
+
+        // OUR SPECIALTY LINE ::AFTER
+        &::after {
+
+            // RESPONSIVE
+            @include translate(top, left, 0, 0);
+        }
+    }
+
+    &-title {
+        font-size: $font-size-paragraph;
+        line-height: $line-height-paragraph;
+        color: $color-font-title;
+        width: 60%;
+        padding: $padding-paragarph 0;
+
+        @include respond(tablet-l) {
+            width: 100%;
+        }
+    }
+
+    &-images {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 3rem;
+
+        &>* {
+            flex: 1 1 0;
+        }
+
+        @include respond(tablet-p) {
+
+            &>* {
+                flex-basis: 50%;
+            }
+        }
+
+        @include respond(phone) {
+
+            &>* {
+                flex-basis: 100%;
+            }
+        }
+
+    }
+
+    &-images-image {
+        position: relative;
+        overflow: hidden;
+
+        & img {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-images-overlay {
+        font-size: $font-size-head-small;
+        position: absolute;
+        display: block;
+        background-color: $color-overlay;
+        @include translate(top, left, 100%, 0);
+        width: 100%;
+        height: 100%;
+        transition: all .5s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: .9em;
+
+        & a:link,
+        a:visited {
+            text-decoration: none;
+        }
+
+        // RESPONDIVE
+        @include respond(tablet-p) {
+            height: 30%;
+            @include translate(bottom, left, 0, 0);
+            top: auto;
+            justify-content: center;
+        }
+
+        @include respond(phone) {
+            height: 20%;
+        }
+
+        // RESPONDIVE HOVER NONE ANY DEVICE
+        @include respond(device) {
+            height: 25%;
+            @include translate(bottom, left, 0, 0);
+            top: auto;
+            justify-content: center;
+        }
+       
+    }
+
+    &-images-image:hover &-images-overlay {
+        @include translate(top, left, 0, 0);
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            @include translate(bottom, left, 0, 0);
+            top: auto;
+        }
+    }
+
+    &-images-overlay-heading {
+        margin-bottom: .2em;
+    }
+
+    &-images-overlay-title {
+        font-size: .8em;
+    }
+
+    &-images-overlay-social {
+        margin-top: .2em;
+
+        & i {
+            color: $color-primary;
+            font-size: .7em;
+            margin-right: .5em;
+        }
+    }
+}
+
+//////////////////////////////////////
+// SECTION HOW WE
+.how-we {
+    padding: padding(10rem);
+    background-color: $color-fourth;
+    @extend %basics;
+    overflow: hidden;
+
+    @include respond(tablet-p) {
+        padding: $padding-section-mobile;
+    }
+
+    &-box {}
+
+    &-header {
+        overflow: hidden;
+
+        &>* {
+            float: left;
+
+            @include respond(tablet-p) {
+                float: none;
+            }
+        }
+    }
+
+    &-header-text {
+        width: 70%;
+        max-width: 70%;
+
+        @include respond(tablet-p) {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    &-header-heading {
+        font-size: $font-size-head;
+        text-indent: $text-indent;
+    }
+
+    .line {
+
+        // OUR SPECIALTY LINE ::AFTER
+        &::after {
+
+            // RESPONSIVE
+            @include translate(top, left, 0, 0);
+        }
+    }
+
+    &-header-title {
+        font-size: $font-size-paragraph;
+        line-height: $line-height-paragraph;
+        color: $color-font-title;
+        width: 80%;
+        padding: 2rem 0;
+
+
+        @include respond(tablet-l) {
+            width: 100%;
+        }
+    }
+
+    &-header-button {
+        width: 30%;
+        max-width: 30%;
+        height: 150px;
+        max-height: 150px;
+        text-align: center;
+
+        @include respond(tablet-p) {
+            height: auto;
+            text-align: left;
+        }
+
+        &>a {
+            text-decoration: none;
+            color: inherit;
+            background-color: $color-third;
+            padding: 1.5rem 4rem;
+            line-height: 150px;
+            font-size: 1.5rem;
+            border-radius: $border-radius;
+
+            &>i {
+                padding-right: 2px;
+            }
+
+            @include respond(tablet-p) {
+                line-height: 5rem;
+            }
+        }
+    }
+
+    &-content-box {
+        position: relative;
+        margin-top: 3rem;
+        display: flex;
+        height: 30rem;
+        min-height: 30rem;
+
+        @include respond(tablet-p) {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            text-align: center;
+
+            &>* {
+                flex: 1 1 100%;
+            }
+        }
+
+
+        &>* {
+            flex: 1 1 0;
+        }
+
+        &::after,
+        &::before {
+            content: '';
+            border: 1px solid darken($color-primary, 50%);
+
+            @include respond(tablet-p) {
+                display: none;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            @include translate(top, right, 50%, 0);
+            width: 102%;
+        }
+
+        &::before {
+            content: '';
+            border-left: 1px solid darken($color-primary, 50%);
+        }
+    }
+
+    &-content-content {
+        padding: 1.5rem;
+        min-height: 15rem;
+        max-height: 15rem;
+        position: relative;
+
+        @include respond(tablet-p) {
+            margin: 5rem 0;
+            min-height: auto;
+        }
+
+        &:nth-child(1)>i,
+        &:nth-child(2)>i,
+        &:nth-child(3)>i,
+        &:nth-child(4)>i {
+            position: absolute;
+            display: block;
+            font-size: $font-size-icon-small;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 5rem;
+            z-index: 100;
+
+            @include respond(tablet-p) {
+                width: 6rem;
+                height: 6rem;
+                line-height: 6rem;
+            }
+        }
+
+        &:nth-child(1)>i {
+            @include translate(top, left, -150px, -26px);
+            background-color: $color-secondary;
+
+            @include respond(tablet-l) {
+                @include translate(top, left, -150px, -24px);
+            }
+
+            @include respond(tablet-p) {
+                @include translate(top, left, -38px, 50%);
+            }
+        }
+
+        &:nth-child(2)>i {
+            @include translate(bottom, left, -150px, -26px);
+            background-color: $color-secondary;
+
+            @include respond(tablet-l) {
+                @include translate(bottom, left, -150px, -24px);
+            }
+
+            @include respond(tablet-p) {
+                @include translate(top, left, -38px, 50%);
+            }
+        }
+
+        &:nth-child(3)>i {
+            @include translate(top, left, -150px, -26px);
+            border: 1px solid darken($color-primary, 50%);
+            background-color: $color-fourth;
+
+            @include respond(tablet-l) {
+                @include translate(top, left, -150px, -24px);
+            }
+
+            @include respond(tablet-p) {
+                @include translate(top, left, -38px, 50%);
+                border: none;
+                background-color: $color-secondary;
+            }
+        }
+
+        &:nth-child(4)>i {
+            @include translate(bottom, left, -150px, -26px);
+            background-color: $color-secondary;
+
+            @include respond(tablet-l) {
+                @include translate(bottom, left, -150px, -24px);
+            }
+
+            @include respond(tablet-p) {
+                @include translate(top, left, -38px, 50%);
+            }
+        }
+
+        // AFTER AND BEFORE
+        &:nth-child(1),
+        &:nth-child(3) {
+            align-self: flex-end;
+
+            // RESPONDIVE
+            @include respond(tablet-p) {
+                align-self: initial;
+            }
+        }
+
+        &:nth-child(2),
+        &:nth-child(4) {
+            align-self: flex-start;
+
+            // RESPONDIVE
+            @include respond(tablet-p) {
+                align-self: initial;
+            }
+        }
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+        }
+
+        &:nth-child(1)::before,
+        &:nth-child(1)::after {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $color-primary;
+            z-index: 200;
+        }
+
+        // CHILD 1 ::AFTER AND BEFORE
+        &:nth-child(1)::after {
+            @include translate(top, right, -10px, -11px);
+        }
+
+        &:nth-child(1)::before {
+            @include translate(top, left, -10px, -11px);
+        }
+
+        // CHILD 2 ::AFTER AND BEFORE
+        &:nth-child(2)::after {
+            border-left: 1px solid darken($color-primary, 50%);
+            @include translate(top, left, 0, 0);
+            height: 200%;
+        }
+
+        &:nth-child(2)::before {
+            border-right: 1px solid darken($color-primary, 50%);
+            @include translate(top, right, 0, 0);
+            height: 200%;
+        }
+
+        // CHILD 3 :AFTER AND BEFORE
+        &:nth-child(3)::after {
+            border-right: 1px solid darken($color-primary, 50%);
+            @include translate(bottom, right, 0, 0);
+            height: 200%;
+        }
+
+        &:nth-child(3)::before {
+            @include translate(top, left, -10px, -11px);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $color-primary;
+            z-index: 100;
+        }
+
+        // CHILD 4 :AFTER
+        &:nth-child(4)::after {
+            @include translate(bottom, left, -10px, -10px);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $color-primary;
+            z-index: 100;
+        }
+
+        // RESPONDIVE
+        &:nth-child(1)::before,
+        &:nth-child(1)::after,
+        &:nth-child(2)::before,
+        &:nth-child(2)::after,
+        &:nth-child(3)::before,
+        &:nth-child(3)::after,
+        &:nth-child(4)::before,
+        &:nth-child(4)::after {
+
+            @include respond(tablet-p) {
+                display: none;
+            }
+        }
+    }
+
+    // HOW WE CONTENT CONTENT HEADING
+    &-content-content-heading {
+        font-size: $font-size-heading-category;
+        letter-spacing: $letter-spacing;
+    }
+
+    // HOW WE CONTENT CONTENT TITLE
+    &-content-content-title {
+        padding: $padding-paragarph 0;
+        color: $color-font-title;
+        line-height: $line-height-paragraph;
+        font-size: fontSize($font-size-paragraph, .3);
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            font-size: fontSize($font-size-paragraph, '');
+        }
+    }
+}
+
+//////////////////////////////////////
+// SECTION INFORMATION
+.information {
+    height: 50rem;
+    position: relative;
+    @extend %basics;
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+        height: 70rem;
+    }
+
+    // INFORMATION ::AFTER
+    &::after {
+        content: '';
+        position: absolute;
+        background: url(../img/woman.png) no-repeat;
+        display: block;
+        @include translate(top, left, -25%, 51%);
+        width: 100%;
+        height: 125%;
+
+        // RESPONSIVE
+        @include respond(tablet-l) {
+            display: none;
+        }
+    }
+
+    // INFORMATION BOX
+    &-box {
+        background: $color-gradient-secandary, url(../img/header-section.jpg) no-repeat;
+        background-size: cover;
+        background-position-y: 50%;
+        position: absolute;
+        display: block;
+        @include translate(top, left, 0, 0);
+        width: 100%;
+        height: 100%;
+        padding: padding(10rem);
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            padding: $padding-section-mobile;
+            height: 100%;
+        }
+    }
+
+    // INFORMATION HEADER
+    &-header {
+        width: 50%;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            width: 100%;
+        }
+    }
+
+    // INFORMATION HEADER HEADING
+    &-header-heading {
+        font-size: $font-size-head-medium;
+    }
+
+    // INFORMATION HEADER PARAGRAPH
+    &-header-paragraph {
+        color: $color-font-title;
+        line-height: $line-height-paragraph;
+        font-size: fontSize($font-size-paragraph, .3);
+        padding: $padding-paragarph 0;
+    }
+
+    // INFORMATION CONTENT
+    &-content {
+        display: flex;
+        padding: 3rem 0;
+        width: 50%;
+        justify-content: space-between;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    }
+
+    // INFORMATION CONTENT BOX
+    &-content-box {
+        display: flex;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        // // INFORMATION CONTENT > I
+        &>i {
+            display: block;
+            font-size: $font-size-icon-big;
+            padding: 1vmin;
+            color: $color-secondary;
+
+            // RESPONSIVE
+            @include respond(tablet-p) {
+                padding: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    // INFORMATION CONTENT INFO
+    &-content-info {}
+
+    // INFORMATION CONTENT HEAD
+    &-content-head {
+        font-size: $font-size-head;
+    }
+
+    // INFORMATION CONTENT TITLE
+    &-content-title {
+        font-size: fontSize($font-size-head-medium, .5);
+    }
+}
+
+//////////////////////////////////////
+// SECTION SERVICES
+.services {
+    @extend %basics;
+    padding: padding(10rem);
+    height: auto;
+    overflow: hidden;
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+        padding: 3rem 1.5rem;
+    }
+
+    // SERVICES BOX
+    &-box {
+        display: flex;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            flex-direction: column;
+        }
+    }
+
+    // SERVICES HEADER
+    &-header {
+        flex: 1 1 0;
+        color: $color-font-title;
+        font-size: fontSize($font-size-paragraph, .3);
+        margin-right: 4rem;
+    }
+
+    // SERVICES HEADER ABOVE TITLE
+    &-header-above-title {
+        display: block;
+        color: inherit;
+        padding: $padding-paragarph 0;
+    }
+
+    // SERVICES HEADER HEADING
+    &-header-heading {
+        font-size: $font-size-head-medium;
+        color: #fff;
+        border-bottom: $color-border-bottom;
+        padding-bottom: 1rem;
+
+        // SERVICES HEADER HEADING > I
+        &>i {
+            color: $color-secondary;
+        }
+    }
+
+    // SERVICES HEADER PARAGRAPH
+    &-header-paragraph {
+        color: $color-font-title;
+        line-height: $line-height-paragraph;
+        padding: $padding-paragarph 0;
+    }
+
+    // SERVICES CONTENT
+    &-content {
+        flex: 2 1 0;
+        margin-top: 3.5vmax;
+    }
+
+    // SERVICES CONTENT HEADING
+    &-content-heading {
+        font-size: $font-size-head-small;
+        font-weight: normal;
+    }
+
+    // SERVICES CONTENT PARAGRAPH
+    &-content-paragraph {
+        color: $color-font-title;
+        line-height: $line-height-paragraph;
+        padding: $padding-paragarph 0;
+        font-size: fontSize($font-size-paragraph, .3);
+    }
+}
+
+//////////////////////////////////////
+// SECTION FAQ
+.faq {
+    background-color: $color-fourth;
+    margin-top: 40px;
+
+    // FAQ BOX
+    &-box {
+        display: flex;
+        height: 38rem;
+        overflow: hidden;
+
+        // RESPONSIVE
+        @include respond(tablet-l) {
+            align-items: center;
+        }
+
+        @include respond(tablet-p) {
+            flex-direction: column;
+            height: auto;
+        }
+
+        &>* {
+            flex: 1 1 100%;
+        }
+    }
+
+    // FAQ VIDEO BOX
+    &-video-box {
+        position: relative;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    // FAQ VIDEO
+    &-video {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    // FAQ CONTROLS
+    &-controls {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        @include translate(bottom, left, 0, 0);
+        background-color: rgba($color-third, .8);
+    }
+
+    // FAQ CONTROL
+    &-control {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background-color: transparent;
+        @include translate(top, left, 50%, 50%);
+        width: 7rem;
+        height: 7rem;
+        font-size: $font-size-icon-small;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        color: $color-primary;
+        cursor: pointer;
+        transition: all .5s ease;
+    }
+
+    // FAQ CONTROL PLAY
+    &-control--play {
+
+        // FAQ CONTROL PLAY ::AFTER
+        &::after {
+            content: '\f04b';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+        }
+    }
+
+    // FAQ CONTROL PAUSE
+    &-control--pause {
+
+        // FAQ CONTROL PAUSE ::AFTER
+        &::after {
+            content: '\f04c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+        }
+    }
+
+    // FAQ BOX QUESTIONS
+    &-box-questions {
+        text-transform: capitalize;
+        color: $color-primary;
+        padding: 4rem 2rem;
+        font-size: $font-size-head-medium;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            height: 29rem;
+        }
+    }
+
+    // FAQ BOX QUESTIONS HEADING
+    &-box-questions-heading {
+        font-size: 1em;
+        margin-bottom: 2rem;
+    }
+
+    // FAQ BOX QUESTIONS BOX
+    &-box-questions-box {
+        font-size: .6em;
+        margin-bottom: 1rem;
+        border-bottom: $color-border-bottom;
+        width: 80%;
+
+        // FAQ BOX QUESTIONS BOX :FIRAT OF TYPE > P
+        &:first-of-type>p {
+            display: block;
+        }
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            width: 100%;
+        }
+    }
+
+    // FAQ BOX QUESTIONS QUESTION
+    &-box-questions-question {
+        display: block;
+        padding-bottom: .5em;
+        color: $color-paragraph;
+        cursor: pointer;
+
+        // FAQ BOX QUESTIONS QUESTION > I
+        &>i {
+            padding-right: 1rem;
+        }
+    }
+
+    // FAQ BOX QUESTIONS RESULT
+    &-box-questions-result {
+        padding: 1rem 0;
+        color: $color-font-title;
+        line-height: $line-height-paragraph;
+        display: none;
+    }
+
+    // FAQ ANY CLASS 
+    [class*="fa-minus-circle"] {
+        color: $color-secondary;
+    }
+
+}
+
+//////////////////////////////////////
+// SECTION OVERVIEW
+.overview {
+    @extend %basics;
+    padding: padding(10rem);
+
+    // OVERVIEW BOX
+    &-box {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    // OVERVIEW CONTENT
+    &-content {
+        flex: 1 1 calc(97% / 3);
+        margin-bottom: 3rem;
+        padding: 2rem;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            flex-basis: calc(97% / 2);
+            text-align: center;
+        }
+
+        @include respond(phone) {
+            flex-basis: 100%;
+        }
+
+        // OVERVIEW CONTENT > I
+        &>i {
+            font-size: $font-size-icon-small;
+            color: $color-secondary;
+            margin-bottom: 2rem;
+        }
+    }
+
+    // OVERVIEW HEADING
+    &-heading {
+        font-size: $font-size-head-small;
+        color: $color-paragraph;
+    }
+
+    // OVERVIEW PARAGRAPH
+    &-paragraph {
+        color: $color-font-title;
+        font-size: fontSize($font-size-paragraph, .3);
+        line-height: $line-height-paragraph;
+        padding: $padding-paragarph 0;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            width: 100%;
+        }
+    }
+}
+
+//////////////////////////////////////
+// SECTION FAETURED WORKS
+.featured-works {
+    @extend %basics;
+    background-color: $color-fourth;
+
+    // FEATURED WORKS
+    &-header {
+        padding: padding(5rem);
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            padding: $padding-section-mobile;
+        }
+    }
+
+    // FEATURED WORKS HEADING
+    &-heading {
+        font-size: $font-size-head;
+        text-indent: $text-indent;
+    }
+
+    // LINE
+    .line {
+
+        &::after {
+            @include translate(top, left, 0, 0);
+        }
+    }
+
+    // FEATURED WORKS PARAGRAPH
+    &-paragraph {
+        @extend %basics-paragraph;
+    }
+
+    // FEATURED WORKS GALLARY CONTROL
+    &-gallary-control {
+        margin: 5rem 0;
+        text-align: center;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            display: none;
+        }
+    }
+
+    // FEATURED WORKS ITEM CONTROL
+    &-item-control {
+        display: inline-block;
+        padding: 1rem 3rem;
+        border-radius: 100px;
+        border: 1px solid $color-font-title;
+        font-size: 1.5rem;
+        cursor: pointer;
+
+        // FEATURED WORKS ITEM CONTROL :NOT LAST CHILD
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    // ACTIVE
+    .active {
+        background-color: $color-secondary;
+        border-color: transparent;
+    }
+
+    // FEATURED WORKS GALLARY
+    &-gallary {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    // FEATURED WORKS GALLARY BOX
+    &-gallary-box {
+        position: relative;
+        flex: 0 1 calc(100% / 4);
+        height: 20rem;
+
+        @include respond(tablet-l) {
+            flex: 1 1 calc(100% / 3);
+        }
+
+        @include respond(tablet-p) {
+            flex: 1 1 100%;
+            height: auto;
+        }
+    }
+
+    // FEATURED WORKS IMAGE
+    &-image {
+        max-width: 100%;
+        max-height: 100%;
+        height: 100%;
+    }
+
+    // FEATURED WORKS OVERLAY
+    &-overlay {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include translate(top, left, 0, 0);
+        background-color: $color-gradient;
+        transform: scale(0);
+        transition: transform .5s ease;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            display: none;
+        }
+    }
+
+    // FEATURED WORKS GALLARY BOX HOVER
+    &-gallary-box:hover &-overlay {
+        transform: scale(1);
+
+        // RESPONSIVE
+        @include respond(device) {
+            transform: scale(1);
+        }
+    }
+
+    // FEATURED WORKS OVERLAY CONTENT
+    &-overlay-content {
+        backface-visibility: hidden;
+        display: block;
+        position: absolute;
+        @include translate(top, left, 50%, 0);
+        text-align: center;
+        padding: 5px;
+        width: 100%;
+
+        // FEATURED WORKS OVERLAY CONTENT SPAN
+        &>span {
+            display: block;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+        }
+
+        // FEATURED WORKS OVERLAY CONTENT I
+        &>i {
+            backface-visibility: hidden;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $color-secondary;
+            line-height: 50px;
+            font-size: fontSize($font-size-icon-small, .5);
+            transition: transform .5s;
+            cursor: pointer;
+
+            // FEATURED WORKS OVERLAY CONTENT I HOVER
+            &:hover {
+                transform: scale(1.1);
+
+                // RESPONSIVE
+                @include respond(device) {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+}
+
+//////////////////////////////////////
+// SECTION BRAND
+.brand {
+    @extend %basics;
+    padding: padding(10rem);
+
+    @include respond(tablet-p) {
+        padding: $padding-section-mobile;
+    }
+
+    // BRAND HEADER
+    &-header {}
+
+    // BRAND HEDAING
+    &-heading {
+        font-size: $font-size-head;
+        text-indent: $text-indent;
+    }
+
+    // LINE
+    .line {
+
+        &::after {
+            @include translate(top, left, 0, 0);
+        }
+    }
+
+    // BRAND PARAGRAPH
+    &-paragraph {
+        @extend %basics-paragraph;
+    }
+
+    // BRAND CATEGORY
+    &-category {
+        display: flex;
+        margin-top: 5rem;
+
+        // RESPONSIVE
+        @include respond(tablet-l) {
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        // BRAND CATEGORY > ALL
+        &>* {
+            flex: 1 1 0;
+
+            // RESPONSIVE
+            @include respond(tablet-l) {
+                flex: 0 1 calc(98% / 2);
+            }
+
+            @include respond(phone) {
+                flex: 1 1 100%;
+            }
+        }
+    }
+
+    // BRAND BOX
+    &-box {
+        position: relative;
+        height: 35rem;
+        max-height: 35rem;
+        overflow: hidden;
+
+        // BRAND BOX IMG
+        &>img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: filter .5s ease;
+
+            // RESPONSIVE
+            @include respond(tablet-p) {
+                filter: blur(5px);
+            }
+
+        }
+
+        // BRAND BOX CHILD 1 IMAGE AND CHILD 2 IMAGE
+        &:nth-child(1) .brand-overlay-content img,
+        &:nth-child(2) .brand-overlay-content img {
+           max-width: 45%;
+           transform: translateY(55%);
+
+           // RESPONSIVE
+            @include respond(tablet-p) {
+              transform: translateY(0);
+            }
+        }
+
+        // RESPONSIVE
+        @include respond(tablet-l) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    // BRAND OVERLAY CONTENT
+    &-overlay-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include translate(top, left, 0, 0);
+        background-color: $color-gradient;
+
+        // BRAND OVERLAY CONTENT IMG
+        &>img {
+            backface-visibility: hidden;
+            max-width: 40%;
+            transform: translateY(30%);
+            transition: transform .5s ease;
+
+            // RESPONSIVE
+            @include respond(tablet-p) {
+                transform: translateY(0);
+            }
+        }
+
+        // BRAND OVERLAY CONTENT P
+        &>p {
+            width: 80%;
+            font-size: 1.2rem;
+            line-height: $line-height-paragraph;
+            opacity: 0;
+            padding: 1rem .9rem;
+            transform: translateY(100%);
+            transition-property: transform opacity;
+            transition: .5s ease;
+
+            // RESPONSIVE
+            @include respond(tablet-p) {
+                width: 95%;
+                font-size: 1.8rem;
+                padding: 1.5rem .9rem;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    // HOVER
+    &-box:hover &-overlay-content>p {
+        opacity: 1;
+        transform: translateY(0);
+
+        // RESPONSIVE
+        @include respond(device) {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &-box:hover &-overlay-content img {
+        transform: translateY(0);
+
+        // RESPONSIVE
+        @include respond(device) {
+            transform: translateY(0);
+        }
+    }
+
+    &-box:hover>img {
+        filter: blur(5px);
+
+        // RESPONSIVE
+        @include respond(device) {
+            filter: blur(5px);
+        }
+    }
+
+}
+
+//////////////////////////////////////
+// SECTION SAY CLIENTS
+.say-clients {
+    background-color: $color-fourth;
+    padding: padding(10rem);
+    @extend %basics;
+
+    @include respond(tablet-p) {
+        padding: $padding-section-mobile;
+    }
+
+    // SAY CLIENTS INNER
+    &-inner {
+        position: relative;
+    }
+
+    // SAY CLIENTS ITEMS
+    &-items {}
+
+    // SAY CLIENTS ITEM
+    &-item {
+        text-align: center;
+        display: none;
+    }
+
+    // SAY CLIENTS QUOTE
+    &-quote {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+        line-height: $line-height-paragraph;
+        font-size: $font-size-paragraph;
+        color: $color-paragraph;
+        margin-bottom: 1.5rem;
+
+        @include respond(tablet-p) {
+            width: 90%;
+        }
+    }
+
+    // SAY CLIENTS IMG
+    &-img {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+    }
+
+    // SAY CLIENTS TITLE
+    &-title {
+        display: block;
+        margin-top: 1.5rem;
+        font-size: 2rem;
+        color: $color-font-title;
+    }
+
+    // SAY CLIENTS CONTROLS
+    &-controls {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include translate(top, left, 0, 0);
+    }
+
+    // SAY CLIENTS CONTROLS ARROW
+    &-arrow {
+        position: absolute;
+        display: block;
+        color: white;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: $font-size-icon-small;
+        cursor: pointer;
+    }
+
+    // SAY CLIENTS CONTROLS ARROW --NEXT
+    &-arrow--next {
+        right: 0;
+    }
+
+    // SAY CLIENTS CONTROLS ARROW --PREV
+    &-arrow--prev {
+        left: 0
+    }
+}
+
+//////////////////////////////////////
+// SECTION PRICING TABLES
+.pricing-tables {
+    @extend %basics;
+    padding: padding(10rem);
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+        padding: $padding-section-mobile;
+    }
+
+    // PRICE TABLES HEADER
+    &-header {}
+
+    // PRICE TABLES HEADING
+    &-heading {
+        font-size: $font-size-head;
+        text-indent: $text-indent;
+    }
+
+    // LINE
+    .line {
+
+        &::after {
+            @include translate(top, left, 0, 0);
+        }
+    }
+
+    // PRICE TABLES PARAGRAPH
+    &-paragraph {
+        @extend %basics-paragraph;
+    }
+
+    // PRICE TABLES CONTROL
+    &-control {
+        position: relative;
+        left: 50%;
+        @include translate(top, left, 0, 50%);
+        display: inline-block;
+        border-radius: 100px;
+        border: 1px solid $color-font-title;
+        overflow: hidden;
+        margin: 5rem 0;
+
+        @include respond(tablet-l) {
+            display: none;
+        }
+    }
+
+    // PRICE TABLES CONTROL ITEM
+    &-control-item {
+        display: inline-block;
+        padding: 1rem 3rem;
+        font-size: fontSize($font-size-head-small, .4);
+        cursor: pointer;
+    }
+
+    // PRICE TABLES CONTROL ACTIVE
+    &-control-active {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        @include translate(top, left, 0, 0);
+        background-color: $color-secondary;
+        border-radius: inherit;
+        z-index: -1;
+    }
+
+    // PRICE TABLES BOX
+    &-box {
+        display: flex;
+        text-align: center;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    // PRICE TABLES BOX ITEM
+    &-box-item {
+        flex: 0 1 calc(92% / 3);
+        background-color: $color-primary;
+        color: black;
+        border-radius: $border-radius;
+        padding: 2rem 0 0 0;
+        font-size: 2rem;
+        text-transform: uppercase;
+        display: none;
+
+        // RESPONSIVE
+        @include respond(tablet-l) {
+            display: block!important;
+            flex: 0 1 calc(97% / 3);
+            margin-bottom: 1em;
+        }
+
+        @include respond(tablet-p) {
+            border-radius: 0;
+            flex: 0 1 calc(97% / 2);
+        }
+
+        @include respond(phone) {
+            flex: 1 1 100%;
+        }
+    }
+
+    // PRICE TABLES BOX HEADING
+    &-box-heading {
+        font-size: 1em;
+    }
+
+    // PRICE TABLES BOX TITLE
+    &-box-title {
+        color: $color-third;
+        font-size: 4em;
+        margin-bottom: .1em;
+
+        // PRICE TABLES BOX TITLE > SPAN
+        &>span {
+            color: darken($color-item-pricing-tables, 30%);
+            font-size: .3em;
+        }
+
+        // PRICE TABLES BOX TITLE > SPAN :CHILD 1
+        &>span:nth-child(1) {
+            vertical-align: text-top;
+        }
+
+    }
+
+    // PRICE TABLES BOX LIST
+    &-box-list {
+        margin-bottom: .8em;
+    }
+
+    // PRICE TABLES BOX SERVICE
+    &-box-service {
+        padding: .5em;
+        font-size: .7em;
+        font-weight: bold;
+
+        // PRICE TABLES BOX SERVICE ODD
+        &:nth-child(odd) {
+            background-color: $color-item-pricing-tables;
+        }
+    }
+
+    // PRICE TABLES BOX BUTTON
+    &-box-button {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        padding: 1em;
+        background-color: $color-fourth;
+        color: $color-primary;
+        font-size: fontSize($font-size-head-small, .4);
+
+        // PRICE TABLES BOX BUTTON ::AFTER
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $color-secondary;
+            transition: transform .5s cubic-bezier(1, .01, 0, .99);
+        }
+
+        // PRICE TABLES BOX BUTTON SPAN
+        &>span {
+            position: relative;
+            display: block;
+            z-index: 3;
+        }
+    }
+
+    // HOVER
+    &-box-button:hover::after {
+        transform: scaleX(1);
+
+        // RESPONDIVE
+        @include respond(device) {
+            transform: scaleX(0);
+        }
+    }
+
+}
+
+//////////////////////////////////////
+// SECTION NEWS ARTICLES
+.news-articles {
+    @extend %basics;
+    background-color: $color-fourth;
+
+    // NEWS ARTICLES HEADER
+    &-header {
+        padding: padding(10rem);
+
+        @include respond(tablet-p) {
+            padding: $padding-section-mobile;
+        }
+    }
+
+    // NEWS ARTICLES HEADING
+    &-heading {
+        font-size: $font-size-head;
+        text-indent: $text-indent;
+    }
+
+    // LINE
+    .line {
+
+        &::after {
+            @include translate(top, left, 0, 0);
+        }
+    }
+
+    // NEWS ARTICLES PARAGRAPH
+    &-paragraph {
+        @extend %basics-paragraph;
+    }
+
+    // NEWS ARTICLES BOX
+    &-box {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    // NEWS ARTICLES ITEM
+    &-item {
+        position: relative;
+        flex: 0 1 calc(100% / 2);
+        height: 400px;
+        overflow: hidden;
+
+        // NEWS ARTICLES ITEM IMG
+        &>img {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &:nth-child(n+5) {
+            display: none;
+        }
+
+        @include respond(tablet-p) {
+            flex: 1 1 50%;   
+        }
+        
+        @include respond(phone) {
+            flex: 1 1 100%;
+        }
+
+    }
+
+    // NEWS ARTICLES OVERLAY
+    &-overlay {
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include translate(top, left, 0, 0);
+        padding: 1.5rem;
+
+        // NEWS ARTICLES OVERLAY P
+        &>p {
+            position: relative;
+            font-size: fontSize($font-size-paragraph, .4);
+            line-height: $line-height-paragraph;
+            z-index: 3;
+
+            @include respond(tablet-p) {
+                text-align: center;
+                font-size: $font-size-paragraph;
+            }
+        }
+
+        // NEWS ARTICLES OVERLAY ::AFTER
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            @include translate(top, left, 100%, 0);
+            transition: all .8s ease;
+
+            @include respond(tablet-p) {
+                background-image: linear-gradient(to top, rgba(black, .7) 30%, transparent);
+                @include translate(top, left, 0, 0);
+            }
+        }
+
+        @include respond(tablet-p) {
+            align-items: center;
+        }
+    }
+
+    // NEWS ARTICLES HOVER
+    &-item:hover &-overlay::after {
+        @include translate(top, left, 0, 0);
+        background-image: linear-gradient(to top, rgba(black, .7) 30%, transparent);
+    }
+
+    // NEWS ARTICLES BTN
+    &-btn {
+        display: block;
+        background-color: $color-third;
+        color: $color-primary;
+        padding: 3rem 0;
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        text-transform: inherit;
+        font-size: $font-size-paragraph;
+        cursor: pointer;
+    }
+
+}
+
+//////////////////////////////////////
+// SECTION CONTACT US
+.contact-us {
+    @extend %basics;
+    padding: padding(10rem);
+    background-color: $color-fourth;
+    display: flex;
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+        padding: $padding-section-mobile;
+        flex-direction: column;
+    }
+
+    // CONTACT US CONTENT
+    &-content {
+        flex: 1 1 0;
+        margin-right: 3rem;
+
+        // RESPONDIVE
+        @include respond(tablet-p) {
+            flex: 1 1 100%;
+            margin-bottom: 3em;
+        }
+    }
+
+    // CONTACT US HEADER
+    &-header {}
+
+    // CONTACT US HEADER HEADING
+    &-header-heading {
+        font-size: $font-size-head;
+        text-indent: $text-indent;
+    }
+
+    // LINE
+    .line {
+
+        &::after {
+            @include translate(top, left, 0, 0);
+        }
+    }
+
+    // CONTACT US HEADER PARAGRAPH
+    &-header-paragraph {
+        @extend %basics-paragraph;
+        color: $color-paragraph;
+    }
+
+    // CONTACT US INFO
+    &-info {
+        font-size: $font-size-head-small;
+
+        // CONTACT US INFO SPAN
+        &>span {
+            display: block;
+            font-size: .5em;
+            margin-bottom: 1em;
+            color: $color-font-title;
+
+            // RESPONDIVE
+            @include respond(tablet-p) {
+                font-size: .7em;
+            }
+
+            // CONTACT US INFO I
+            &>i {
+                color: $color-primary;
+                padding-right: .8em;
+            }
+        }
+
+        // RESPONDIVE
+        @include respond(tablet-p) {
+            display: inline-block;
+            width: calc(98% / 2);
+        }
+    }
+
+    // CONTACT US INFO HEADING
+    &-info-heading {
+        font-size: .8em;
+        margin-bottom: .4em;
+
+        // RESPONDIVE
+        @include respond(tablet-p) {
+            margin-bottom: 1em;
+        }
+    }
+
+    // CONTACT US FORM
+    &-form {
+        flex: 2 1 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        font-size: $font-size-head-small;
+
+        // RESPONDIVE
+        @include respond(tablet-p) {
+            flex: 1 1 100%;
+        }
+
+        // CONTACT US FORM INPUT AND SELECT AND TEXTAREA
+        & input,
+        & select,
+        & textarea {
+            display: block;
+            width: 100%;
+            font-family: inherit;
+            padding: .9em .5em;
+
+            // RESPONDIVE
+            @include respond(tablet-p) {
+                padding: .2em .5em;
+            }
+        }
+
+        // CONTACT US TEXTAREA
+        & textarea {
+            resize: none;
+            height: 15em;
+        }
+
+        // CONTACT US LABEL
+        & label {
+            display: block;
+            font-size: .6em;
+            margin-bottom: .7em;
+            color: $color-font-title;
+            height: 2rem;
+
+            // RESPONDIVE
+            @include respond(tablet-p) {
+                font-size: .8em;
+            }
+        }
+
+        // CONTACT US SELECT
+        & select {
+            appearance: none;
+        }
+
+        // CONTACT US ::PLACEHOLDER
+        ::placeholder {
+            text-transform: capitalize;
+
+            // RESPONDIVE
+            @include respond(tablet-p) {
+                font-size: .8em;
+            }
+        }
+
+    }
+
+    // CONTACT US FORM GROUP
+    &-form-group {
+        flex: 0 1 calc(97% / 2);
+        margin-bottom: .6em;
+        overflow: hidden;
+
+        // CONTACT US FORM GROUP :NTH-CHILD(5)
+        &:nth-child(5) {
+            flex-basis: 100%;
+            flex-grow: 1;
+        }
+    }
+
+    // CONTACT US FORM GROUP SELECT
+    &-form-group-select {
+        position: relative;
+
+        // CONTACT US FORM GROUP SELECT ::AFTER
+        &::after {
+            content: '\f078';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            @include translate(top, right, 50%, 4%);
+            color: lighten(black, 60%);
+            pointer-events: none;
+            font-size: .6em;
+            cursor: pointer;
+        }
+
+    }
+
+    // CONTACT US FORM SUBMIT
+    &-form-submit {
+        position: relative;
+        transition: transform .5s;
+
+        // CONTACT US FORM SUBMIT INPUT
+        &>input {
+            display: inline-block;
+            width: auto;
+            padding: 1em 4em 1em 5em;
+            background-color: $color-third;
+            border: none;
+            outline: none;
+            color: inherit;
+            text-transform: inherit;
+            font-size: .6em;
+            cursor: pointer;
+
+            // RESPONDIVE
+            @include respond(tablet-p) {
+                font-size: .8em;
+            }
+        }
+
+        // CONTACT US FORM SUBMIT ::AFTER
+        &::after {
+            content: '\f1d8';
+            font-family: 'Font Awesome 5 Free';
+            position: absolute;
+            @include translate(top, left, 50%, 18%);
+            font-size: .8em;
+        }
+
+        // CONTACT US FORM SUBMIT :ACTIVE
+        &:active {
+            transform: translateY(.5rem);
+        }
+
+        // CONTACT US FORM SUBMIT :ACTIVE > INPUT
+        &:active>input {
+            background-color: $color-primary;
+            color: $color-third;
+        }
+
+        // CONTACT US FORM SUBMIT :ACTIVE::AFTER
+        &:active::after {
+            color: $color-third;
+        }
+
+    }
+
+}

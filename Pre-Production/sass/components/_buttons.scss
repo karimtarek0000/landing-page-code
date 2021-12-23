@@ -1,0 +1,34 @@
+///////////////////////////////////////////
+// BUTTONS BIG
+.buttons-big {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    color: $color-primary;
+    background-color: $backgroud-color-button;
+    border-radius: $border-radius;
+    font-size: $font-size-button;
+    cursor: pointer;
+}
+
+///////////////////////////////////////////
+// BUTTON TOP
+.button-top {
+    position: fixed;
+    font-size: $font-size-icon-big;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: $color-secondary;
+    @include translate(bottom, right, 2%, 2%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+
+    // BUTTON TOP > I
+    & > i {
+        color: $color-primary;
+        font-size: 1em;
+    }
+
+}

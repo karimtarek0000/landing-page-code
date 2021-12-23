@@ -1,0 +1,134 @@
+//////////////////////////////////////
+// FOOTER
+.footer {
+    padding: padding(10rem);
+    display: flex;
+    flex-flow: row wrap;
+    font-size: $font-size-head;
+    color: $color-primary;
+    text-transform: capitalize;
+    
+    // RESPONSIVE
+    @include respond(tablet-p) {
+        padding: $padding-section-mobile;
+    }
+
+    // FOOTER CONTENT
+    &-content {
+        flex: 1 1 65%;
+        margin-right: 5%;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            flex-basis: 100%;
+            margin-right: 0;
+            margin-bottom: 1.5em;
+            order: 1;
+        }
+    }
+
+    // FOOTER CONTENT NAV
+    &-content-nav {}
+
+    // FOOTER CONTENT ITEM
+    &-content-item {
+        display: inline-block;
+        font-size: .4em;
+        color: $color-paragraph;
+    }
+
+    // FOOTER CONTENT INFO
+    &-content-info {}
+
+    // FOOTER CONTENT HEADING
+    &-content-heading {
+        margin: .7em 0 .4em 0;
+        padding-bottom: .3em;
+        font-weight: normal;
+        border-bottom: $color-border-bottom;
+    }
+
+    // FOOTER CONTENT PARAGRAPH
+    &-content-paragraph {
+        font-size: .3em;
+        color: $color-font-title;
+        line-height: $line-height-paragraph;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            font-size: .5em;
+        }
+    }
+
+    // FOOTER CONTENT FOOTER
+    &-content-footer {
+        font-size: .3em;
+        color: $color-font-title;
+        margin-top: 6em;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            font-size: .5em;
+             margin-top: 2.5em;
+        }
+    }
+
+    // FOOTER SOCIAL
+    &-social {
+        flex: 1 1 30%;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            flex-basis: 100%;
+            order: -1;
+            margin-bottom: .5em;
+        }
+    }
+
+    // FOOTER SOCIAL HEADING
+    &-social-heading {}
+
+    // FOOTER SOCIAL PARAGRAPH
+    &-social-paragraph {
+        font-size: .3em;
+        margin-top: 2em;
+        line-height: $line-height-paragraph;
+        color: $color-font-title;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            font-size: .5em;
+            margin-top: 1em;
+        }
+    }
+
+    // FOOTER SOCIAL ICONS
+    &-social-icons {
+        margin-top: .5em;
+    }
+
+    // FOOTER SOCIAL ICON
+    &-social-icon {
+        display: inline-block;
+        text-decoration: none;
+        font-size: .5em;
+        background-color: $color-primary;
+        color: $color-third;
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        text-align: center;
+        line-height: 4rem;
+
+        // FOOTER SOCIAL ICON NOT :LAST CHILD
+        &:not(:last-child) {
+            margin-right: .1em;
+        }
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+            font-size: .7em;
+        }
+
+    }
+}

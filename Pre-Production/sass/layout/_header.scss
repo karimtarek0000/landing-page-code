@@ -1,0 +1,89 @@
+/////////////////////////
+// HEADER
+.header {
+    height: 100vh;
+    background-image: linear-gradient($color-gradient, $color-gradient), url(../img/header.jpg);
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+        background-position-x: 65%;
+    }
+
+    // HEADER BOX
+    &-box {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include translate(top, left, 0, 0);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: $color-primary;
+        text-transform: capitalize;
+    }
+
+    // HEADER CONTENT
+    &-content {}
+
+    // HEADER HEADING
+    &-heading {
+        font-size: $font-size-h1;
+        font-weight: normal;
+        margin-bottom: 6rem;
+
+        // HEADER HEADING DIRECT SPAN
+        &>span {
+            font-weight: 700;
+        }
+    }
+
+    .underline {
+        
+        &::after {
+            @include translate(bottom, left, -30%, 50%);
+            width: 10%;
+        }
+    }
+
+    // HEADER PARAGRAPH
+    &-paragraph {
+        width: 50%;
+        margin: 0 auto;
+        line-height: $line-height-paragraph;
+        font-size: $font-size-paragraph;
+        color: $color-paragraph;
+
+        // RESPONSIVE
+        @include respond(tablet-l) {
+            width: 100%;
+        }
+    }
+
+    // HEADER ICON
+    &-icon {
+        font-size: $font-size-icon-big;
+        opacity: 0;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    // HEADER ICON MODIFIY
+    &--icon {
+        opacity: 1;
+        animation: arrow 1s infinite backwards ease;
+
+        // HEADER ICON :HOVER
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+           visibility: hidden;
+        }
+    }
+}
